@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {"source": "/news", "destination": "/news.html"},
+    {"source": "/calendar", "destination": "/calendar.html"},
+    {"source": "/results", "destination": "/results.html"},
+    {"source": "/standings", "destination": "/standings.html"},
+    {"source": "/drivers", "destination": "/drivers.html"},
+    {"source": "/teams", "destination": "/teams.html"},
+    {"source": "/live", "destination": "/live.html"}
+  ]
+}

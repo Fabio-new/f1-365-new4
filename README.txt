@@ -1,8 +1,12 @@
-F1 365 - V17
-Pacchetto statico pronto per GitHub + Vercel.
-
-IMPORTANTE:
-- Tutti i file sono nella cartella principale.
-- I menu usano normali link HTML (a href), quindi funzionano anche senza JavaScript.
-- Carica tutti i file nella root del repository.
-- Il file da pubblicare come home è index.html.
+F1 365 V18
+Versione definitiva per Vercel.
+- Home: /
+- News: /news
+- Calendario: /calendar
+- Risultati: /results
+- Classifiche: /standings
+- Piloti: /drivers
+- Team: /teams
+- F1 Live: /live
+I file HTML restano tutti nella root.
+Caricare TUTTI i file del pacchetto nella root del repository.
