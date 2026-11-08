@@ -1,0 +1,67 @@
+
+:root{
+  --bg:#070707; --panel:#111111; --panel2:#171717; --red:#e10600;
+  --white:#fff; --muted:#a9a9a9; --line:#292929;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% -10%,#3b0805 0,#070707 32%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:#050505;border-bottom:1px solid #222;font-size:13px;color:#aaa}
+.topbar .container{height:34px;display:flex;align-items:center;justify-content:space-between}
+header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.96);backdrop-filter:blur(10px);border-bottom:1px solid #252525}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:1000;font-style:italic;font-size:30px;letter-spacing:-2px}
+.logo span{color:var(--red)}
+.menu{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.menu a{padding:11px 12px;border-radius:7px;font-size:14px;font-weight:800}
+.menu a:hover,.menu a.active{background:var(--red)}
+.hero{padding:58px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:20px}
+.hero-main{min-height:430px;border-radius:18px;overflow:hidden;position:relative;background:
+linear-gradient(0deg,rgba(0,0,0,.94),rgba(0,0,0,.15)),
+linear-gradient(135deg,#160000,#080808 55%,#270603)}
+.hero-main:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,rgba(255,255,255,.035) 27px 28px);pointer-events:none}
+.hero-content{position:absolute;z-index:2;left:34px;right:34px;bottom:32px}
+.kicker{display:inline-block;background:var(--red);padding:7px 11px;border-radius:4px;font-size:12px;font-weight:900;letter-spacing:1px}
+h1{font-size:clamp(42px,6vw,76px);line-height:.92;margin:16px 0 14px;letter-spacing:-3px}
+.hero p{max-width:650px;color:#d1d1d1;font-size:17px;line-height:1.55;margin:0 0 22px}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--red);padding:13px 18px;border-radius:7px;font-weight:900}
+.cta:hover{filter:brightness(1.12)}
+.side{display:grid;gap:20px}
+.card{background:linear-gradient(145deg,#151515,#0e0e0e);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 9px;font-size:18px}
+.muted{color:var(--muted)}
+.next{border-left:4px solid var(--red)}
+.next .big{font-size:32px;font-weight:1000;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.section{padding:20px 0 55px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}
+.section-head h2{font-size:30px;margin:0}
+.section-head a{color:#ddd;font-size:13px;font-weight:800}
+.tile{min-height:145px;display:flex;flex-direction:column;justify-content:space-between;transition:.18s}
+.tile:hover{transform:translateY(-4px);border-color:#555}
+.icon{font-size:30px}
+.tile strong{font-size:19px}
+.news{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+.news .card{min-height:180px}
+.news .lead{background:linear-gradient(145deg,#2a0503,#111)}
+.badge{display:inline-block;color:#fff;background:#272727;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900}
+footer{border-top:1px solid #222;padding:28px 0;color:#777;font-size:13px}
+.mobile{display:none}
+.page{padding:45px 0 70px}
+.page h1{font-size:48px;letter-spacing:-2px;margin:0 0 10px}
+.list{display:grid;gap:12px;margin-top:24px}
+.row{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:18px;background:#111;border:1px solid #252525;border-radius:12px}
+.row:hover{border-color:#555}
+@media(max-width:900px){
+ .hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.news{grid-template-columns:1fr 1fr}
+ .menu{display:none}.mobile{display:block;border:1px solid #333;background:#111;color:#fff;border-radius:7px;padding:9px 12px}
+ .nav{height:auto;min-height:70px;flex-wrap:wrap;padding:8px 0}.menu.open{display:flex;width:100%;padding-bottom:10px}
+}
+@media(max-width:600px){
+ .hero{padding-top:28px}.hero-main{min-height:460px}.hero-content{left:22px;right:22px;bottom:24px}
+ .grid,.news{grid-template-columns:1fr}.topbar .container{font-size:11px}
+ h1{font-size:48px}.page h1{font-size:38px}
+}
